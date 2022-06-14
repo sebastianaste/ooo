@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset="utf-8">
+
+</head>
+<body>
+<style>
+ @font-face { font-family: YellowCandy; src: url('Yellow Candy.otf'); } 
+ h1 {
+ font-family: YellowCandy;
+ font-size: 40px;
+ color: #fff;
+ word-spacing: 3px;
+ text-align: right;
+ letter-spacing: 1px;
+ text-shadow: 
+			 
+		     
+			  1px -1px 0 #000,
+			 -1px 1px 0 #000;
+ }
+
+</style>
+
+	<h1 id="texto" >bruh</h1>
+	
+<script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous">
+</script>
+<script>
+var text = ["1",
+ "2",
+ "3",
+ ];
+var counter = 0;
+var elem = $("#texto");
+setInterval(change, 15000);
+
+function change() {
+   // Fade out
+   $("#texto").fadeOut(1000, function() {
+      // Increment the counter
+      counter++;
+      if(counter >= text.length) { counter = 0; }
+      // Update the text and fade in
+      $("#texto").text(text[counter]).fadeIn(1000);
+   })
+}
+
+
+
+</script>
+
+</body>
+</html>
